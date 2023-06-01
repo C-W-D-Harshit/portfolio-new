@@ -1,98 +1,24 @@
-:root {
-  --max-width: 1100px;
-  --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
-
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-
-  --primary-glow: conic-gradient(
-    from 180deg at 50% 50%,
-    #16abff33 0deg,
-    #0885ff33 55deg,
-    #54d6ff33 120deg,
-    #0071ff33 160deg,
-    transparent 360deg
-  );
-  --secondary-glow: radial-gradient(
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
-
-  --tile-start-rgb: 239, 245, 249;
-  --tile-end-rgb: 228, 232, 233;
-  --tile-border: conic-gradient(
-    #00000080,
-    #00000040,
-    #00000030,
-    #00000020,
-    #00000010,
-    #00000010,
-    #00000080
-  );
-
-  --callout-rgb: 238, 240, 241;
-  --callout-border-rgb: 172, 175, 176;
-  --card-rgb: 180, 185, 188;
-  --card-border-rgb: 131, 134, 135;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-
-    --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
-    --secondary-glow: linear-gradient(
-      to bottom right,
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0),
-      rgba(1, 65, 255, 0.3)
-    );
-
-    --tile-start-rgb: 2, 13, 46;
-    --tile-end-rgb: 2, 5, 19;
-    --tile-border: conic-gradient(
-      #ffffff80,
-      #ffffff40,
-      #ffffff30,
-      #ffffff20,
-      #ffffff10,
-      #ffffff10,
-      #ffffff80
-    );
-
-    --callout-rgb: 20, 20, 20;
-    --callout-border-rgb: 108, 108, 108;
-    --card-rgb: 100, 100, 100;
-    --card-border-rgb: 200, 200, 200;
-  }
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/* // fonts */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* color: #fff; */
+}
+
+/* root */
+:root {
+  --border: #676767;
+  --main: #1d1c1d;
+  --green: #15cf81;
+  --green-f: #39d98d;
 }
 
 a {
@@ -100,8 +26,437 @@ a {
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
+body {
+  background-color: var(--main);
+  /* font-family: "Poppins", sans-serif; */
+  /* overflow: hidden; */
+  font-family: "Poppins", sans-serif;
+}
+
+/* 1rem to 10px */
+html {
+  font-size: 57%;
+  cursor: url("../../components/home/curm.png"), auto;
+  /* font-family: "poppins", sans-serif; */
+}
+
+/* own scrollbar */
+html {
+  /* scrollbar firefox */
+  scrollbar-color: rgb(1, 1, 1) rgb(110, 110, 110);
+  scroll-behavior: smooth;
+}
+
+/* Note: The -webkit-scrollbar is not supported by Firefox or IE and Edge. */
+
+::-webkit-scrollbar {
+  /* width */
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  /* Track */
+  box-shadow: inset 0 0 5px grey;
+  /* border-radius: 8px; */
+}
+
+::-webkit-scrollbar-thumb {
+  /* Handle */
+  background: rgb(110, 110, 110);
+  /* border-radius: 10px; */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  /* Handle on hover */
+  background: rgb(110, 110, 110);
+}
+
+::-webkit-scrollbar-track-piece {
+  /* not handle on */
+  background: var(--main);
+}
+@media (max-width: 768px) {
   html {
-    color-scheme: dark;
+    font-size: 50%;
   }
+}
+
+/* layout */
+.layout {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.mainCard {
+  height: 95%;
+  border: 1px solid var(--border);
+  width: 50rem;
+  border-radius: 2rem;
+  padding: 4rem 3rem;
+  position: sticky;
+  top: 0;
+  background-color: var(--main);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.mainCard > :first-child {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 3.1rem;
+  align-items: center;
+  color: #fff;
+  font-weight: 700;
+  font-family: "Poppins", sans-serif;
+}
+
+.mainCard > :first-child > :last-child {
+  font-size: 2.5rem;
+  color: var(--border);
+  font-weight: 400;
+}
+
+.mainCard > :nth-child(2) {
+  width: 90%;
+  height: 40%;
+  border-radius: 2rem;
+}
+
+.mainCard > :nth-child(2) > :first-child {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  filter: grayscale(100%);
+}
+
+.mainCard > :nth-child(3) {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mainCard > :nth-child(3) > * {
+  margin-bottom: 1rem;
+}
+
+.mainCard > :nth-child(3) > :first-child {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #dbdbdb;
+}
+
+.mainCard > :nth-child(3) > :nth-child(2) {
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: #dbdbdb;
+}
+
+.mainCard > :nth-child(3) > :last-child {
+  font-size: 1.8rem;
+  color: var(--border);
+  margin: 0;
+}
+
+.card_but {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.card_but > * > * > :first-child {
+  font-size: 3rem;
+  color: #fff;
+  width: 6rem;
+  height: 6rem;
+  border: 1px solid var(--border);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 50%;
+  transition: 0.5s ease-in-out;
+}
+
+.card_but > * > * > :first-child:hover {
+  color: var(--green-f);
+  border-color: var(--green);
+}
+
+.card_cta {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  padding: 1rem 2rem;
+  background-color: var(--green);
+  border-radius: 2rem;
+}
+
+/* sidebar */
+
+.sidebar {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+.sidebar_ {
+  border: 1px solid var(--border);
+  height: 58%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1.5rem;
+  border-radius: 3.5rem;
+  background-color: var(--main);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.sidebar_ > * > :first-child {
+  font-size: 2.4rem;
+}
+
+.side-ico {
+  color: var(--border);
+  transition: 0.5s ease-in-out;
+}
+
+.side-ico:hover {
+  color: var(--green-f);
+  transition: 0.5s ease-in-out;
+}
+
+.side-ico-active {
+  transition: 0.5s ease-in-out;
+  color: var(--green-f);
+}
+
+/* main */
+main {
+  width: 100%;
+  padding: 0 4rem;
+  height: 100%;
+}
+
+.scard {
+  padding: 1rem 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 3rem;
+  color: #dbdbdb;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  text-transform: capitalize;
+  font-size: 2rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+.home {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: left;
+  margin: 1rem 0;
+}
+
+.home_tit {
+  font-weight: 500;
+  font-size: 7rem;
+  color: #fff;
+}
+
+.home_des {
+  font-size: 3rem;
+  color: #dbdbdb;
+}
+
+.intro_c {
+  width: 100%;
+  display: flex;
+  justify-content: right;
+  height: 42rem;
+  align-items: center;
+}
+
+.intro_cta {
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  /* width: 20rem;
+  height: 20rem; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.intro_cta > :first-child > :first-child {
+  color: #fff;
+  font-size: 4rem;
+  width: 20rem;
+  height: 20rem;
+  padding: 6rem;
+}
+
+.resume {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: #fff;
+}
+
+.ser_holder {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10rem;
+}
+
+.specCard {
+  width: 100%;
+  height: 17rem;
+  border: 1px solid var(--green);
+  border-radius: 20px;
+  margin: 2rem;
+  padding: 2rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.specCard > :first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.specCard > :first-child > :first-child {
+  color: var(--green-f);
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+.specCard > :first-child > :nth-child(2) {
+  color: var(--border);
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.specCard > :first-child > :nth-child(3) {
+  color: #bfbfbf;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.specCard > :nth-child(2) {
+  font-size: 5rem;
+  color: var(--green);
+}
+
+.s_hold {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.s_hold > * {
+  width: 18rem;
+  height: 18rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border: 1px solid var(--green);
+  color: var(--green);
+  border-radius: 50%;
+  font-size: 7rem;
+  margin: 4rem;
+}
+
+.pro_hold {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  flex-wrap: wrap;
+  height: 90vh;
+}
+
+.pro {
+  width: 30%;
+  height: 40rem;
+  background-color: var(--main);
+  padding: 2rem;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  overflow: hidden;
+  overflow-y: auto;
+  min-width: 40rem;
+  margin: 1rem;
+}
+
+.pro_img {
+  width: 100%;
+  height: 50%;
+  margin-bottom: 1rem;
+  /* background-color: var(--border); */
+}
+
+.pro_img > :first-child {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+
+.pro_cont {
+  width: 100%;
+  margin-bottom: 1rem;
+  /* height: 70%; */
+}
+
+.pro_cont > :first-child {
+  font-size: 3rem;
+  font-weight: 600;
+  color: var(--green-f);
+  margin-bottom: 1rem;
+}
+.pro_cont > :last-child {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #bfbfbf;
 }
