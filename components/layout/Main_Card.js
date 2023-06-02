@@ -49,12 +49,12 @@ const Main_Card = () => {
           </IconButton>
         </Link>
       </div>
-      <div className="card_cta">
+      <Link href="mailto:hello@cleverdevloper.in" className="card_cta">
         <IconButton>
           <GoMail style={{ fontSize: "3rem", color: "#000000" }} />
         </IconButton>
         <p>HIRE ME!</p>
-      </div>
+      </Link>
     </div>
   );
 };
