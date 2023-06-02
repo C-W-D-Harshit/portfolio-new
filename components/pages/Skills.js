@@ -9,8 +9,9 @@ import {
   TbEyeglass,
 } from "react-icons/tb";
 import { AiFillHtml5 } from "react-icons/ai";
-import { FaCss3Alt, FaReact, FaWordpress } from "react-icons/fa";
+import { FaCss3Alt, FaNode, FaReact, FaWordpress } from "react-icons/fa";
 import { BsFillBootstrapFill } from "react-icons/bs";
+import { SiMongodb, SiNodedotjs } from "react-icons/si";
 
 const Skills = () => {
   return (
@@ -29,6 +30,9 @@ const Skills = () => {
         <TbBrandTailwind />
         <FaWordpress />
         <BsFillBootstrapFill />
+        <FaNode />
+        <SiMongodb />
+        <SiNodedotjs />
         <TbBrandNextjs />
       </div>
     </div>

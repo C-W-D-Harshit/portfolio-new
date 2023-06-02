@@ -57,13 +57,15 @@ const Projects = () => {
           <div className="pro_cont">
             <p>Bites</p>
             <p>
-              Introducing a cutting-edge, full-stack e-commerce website powered
-              by a custom Next.js server that harnesses an incredible amount of
-              power. With a strong emphasis on user-friendliness, this website
-              offers an unparalleled experience for customers. Its sleek and
-              intuitive design ensures that users can effortlessly navigate
-              through products, browse categories, and complete purchases with
-              ease.
+              Bites is a sophisticated and intuitive full-stack food ordering
+              website crafted with Next.js. Seamlessly blending cutting-edge
+              technology and culinary excellence, Bites offers a delightful
+              experience for food enthusiasts. Explore a wide range of
+              delectable dishes, effortlessly navigate through user-friendly
+              menus, and indulge in seamless online ordering. With its sleek
+              design and robust functionality, Bites sets a new standard for the
+              digital food industry, providing customers with a seamless and
+              satisfying culinary journey.
             </p>
           </div>
         </Link>
@@ -84,13 +86,16 @@ const Projects = () => {
           <div className="pro_cont">
             <p>Blog App</p>
             <p>
-              Introducing a cutting-edge, full-stack e-commerce website powered
-              by a custom Next.js server that harnesses an incredible amount of
-              power. With a strong emphasis on user-friendliness, this website
-              offers an unparalleled experience for customers. Its sleek and
-              intuitive design ensures that users can effortlessly navigate
-              through products, browse categories, and complete purchases with
-              ease.
+              The Blog App is a professional and feature-rich full-stack web
+              application built with Next.js. It empowers bloggers and content
+              creators with a dynamic platform to express their ideas and engage
+              with readers. With a sleek and intuitive design, the Blog App
+              ensures a seamless user experience, allowing visitors to
+              effortlessly navigate through captivating articles, leave
+              comments, and interact with the vibrant blogging community.
+              Leveraging the power of Next.js, this cutting-edge web app
+              delivers exceptional performance and responsiveness, enhancing the
+              reading and writing experience for both authors and readers alike.
             </p>
           </div>
         </Link>
@@ -111,13 +116,16 @@ const Projects = () => {
           <div className="pro_cont">
             <p>Todo App</p>
             <p>
-              Introducing a cutting-edge, full-stack e-commerce website powered
-              by a custom Next.js server that harnesses an incredible amount of
-              power. With a strong emphasis on user-friendliness, this website
-              offers an unparalleled experience for customers. Its sleek and
-              intuitive design ensures that users can effortlessly navigate
-              through products, browse categories, and complete purchases with
-              ease.
+              The Todo App is a versatile and efficient full-stack web
+              application developed with Next.js. It offers a streamlined and
+              intuitive interface to help users organize their tasks and boost
+              productivity. With its sleek design and robust functionality, the
+              Todo App allows users to effortlessly create, manage, and
+              prioritize tasks, ensuring nothing falls through the cracks.
+              Powered by Next.js, this dynamic web app delivers exceptional
+              performance and responsiveness, enabling users to stay on top of
+              their to-do lists with ease. Experience a seamless and efficient
+              task management solution with the Todo App.
             </p>
           </div>
         </Link>

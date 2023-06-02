@@ -35,7 +35,7 @@ body {
 
 /* 1rem to 10px */
 html {
-  font-size: 57%;
+  font-size: 54%;
   cursor: url("../../components/home/curm.png"), auto;
   /* font-family: "poppins", sans-serif; */
 }
@@ -282,7 +282,11 @@ main {
   flex-direction: column;
   justify-content: space-around;
   align-items: left;
-  margin: 1rem 0;
+  margin: 3rem 0;
+}
+
+.home > :last-child {
+  margin-bottom: 2rem;
 }
 
 .home_tit {
@@ -426,7 +430,7 @@ main {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   overflow: hidden;
   overflow-y: auto;
-  min-width: 40rem;
+  min-width: 30rem;
   margin: 1rem;
 }
 
