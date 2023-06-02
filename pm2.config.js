@@ -4,7 +4,8 @@ module.exports = {
   apps: [
     {
       name: "portfolio",
-      script: "server.js", // Replace 'server.js' with the name of your custom server file
+      script: "node_modules/next/dist/bin/next",
+      args: "start",
       exec_mode: "cluster",
       instances: "max",
       autorestart: true,
